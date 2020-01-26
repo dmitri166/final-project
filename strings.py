@@ -13,7 +13,7 @@ import pytest
 
 def no_duplicates():
     x = ('monty pythons flying circus')
-    a = sorted(x)
+    a = ''.join(sorted(set(x)))
     print(a)
 no_duplicates()
 
@@ -28,7 +28,16 @@ reversed_words()
     #pass
 
 
-#def four_char_strings(a_string):
+def four_char_strings(s):
+    return [s[i: i + 4] for i in range(0, len(s), 4)]
+x = four_char_strings('monty pythons flying circus')
+print(x)
+
+
+
+
+
+
     #pass
 
 
